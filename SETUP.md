@@ -4,7 +4,7 @@ It is recommended to install [Pyenv](https://github.com/pyenv-win/pyenv-win) to 
 
 To install version 3.12.2 required for the project, if using Pyenv, run `pyenv install 3.12.2` in the terminal. To set the project folder to use the correct version, use `pyenv local 3.12.2`.
 
-We also use the `virtualenv` library to create a virtual environment for the project, ensuring dependencies do not mix with the global Python environment. Additionally, we use the `pre-commit` library to standardize code across all contributors before committing.
+We also use the `virtualenv` library to create a virtual environment for the project, ensuring dependencies do not mix with the global Python environment. Additionally, we use the [`pre-commit`](https://pre-commit.com/) tool to standardize code across all contributors before committing.
 
 ```powershell
 # Install virtual environment library

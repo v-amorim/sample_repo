@@ -1,7 +1,4 @@
 # Setup dependencies
-autopep8
-black
-flake8
 pip-tools
 pre-commit
 python-dotenv
@@ -9,6 +6,6 @@ ruff
 tqdm
 virtualenv
 
-# Reporting dependencies
+# Project-related dependencies
 matplotlib
 numpy
