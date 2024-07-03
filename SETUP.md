@@ -1,74 +1,70 @@
 ## **Setup**
 
-Recomendado instalar o [Pyenv](https://github.com/pyenv-win/pyenv-win), para gerenciar as versões do python.
+It is recommended to install [Pyenv](https://github.com/pyenv-win/pyenv-win) to manage Python versions.
 
-Para instalar a versão 3.12.2 necessária para o projeto, caso use pyenv, basta rodar o comando `pyenv install 3.12.2` no terminal, para deixar a pasta do projeto com a versão correta, basta rodar o comando `pyenv local 3.12.2` no terminal.
-Usamos também a biblioteca `virtualenv`, que cria um ambiente virtual para o projeto, fazendo com que as dependências não se misturem com o ambiente global do python.
-Também temos a biblioteca `pre-commit`, que padroniza os códigos de todos os colaboradores antes de subir seus commits.
+To install version 3.12.2 required for the project, if using Pyenv, run `pyenv install 3.12.2` in the terminal. To set the project folder to use the correct version, use `pyenv local 3.12.2`.
 
-```bash
-# Instala a biblioteca de ambiente virtual
+We also use the `virtualenv` library to create a virtual environment for the project, ensuring dependencies do not mix with the global Python environment. Additionally, we use the `pre-commit` library to standardize code across all contributors before committing.
+
+```powershell
+# Install virtual environment library
 > python -m pip install virtualenv
-# Cria o ambiente virtual
+# Create virtual environment
 > virtualenv .venv
-# Ativa o ambiente virtual
+# Activate virtual environment
 > .venv\Scripts\activate
-# Instala o pip-tools
+# Install pip-tools
 (.venv) > python -m pip install pip-tools
-# Gera o requirements.txt
+# Generate requirements.txt
 (.venv) > python -m piptools compile --upgrade
-# Instala as dependências
+# Install dependencies
 (.venv) > python -m piptools sync
-# Instala o pre-commit (padrões de código)
+# Install pre-commit (code standards)
 (.venv) > pre-commit install
 ```
 
-Tudo junto, para facilitar:
+For simplicity, all together:
 
-```bash
-# Windows CMD e Powershell
-> python -m pip install virtualenv & python -m virtualenv .venv & .venv\Scripts\activate & python -m pip install pip-tools & python -m piptools compile --upgrade & python -m piptools sync & pre-commit install
-> python -m pip install virtualenv ; python -m virtualenv .venv ; .venv\Scripts\activate ; python -m pip install pip-tools ; python -m piptools compile --upgrade ; python -m piptools sync ; pre-commit install
+```powershell
+python -m pip install virtualenv ; python -m virtualenv .venv ; .venv\Scripts\activate ; python -m pip install pip-tools ; python -m piptools compile --upgrade ; python -m piptools sync ; pre-commit install
 ```
 
 ---
 
 ## **Requirements**
 
-Sempre que for instalar uma nova dependência, é necessário atualizar o requirements.txt, para isso, coloque a nova dependencia no `requirements.in` e então rode o comando abaixo:
+Whenever installing a new dependency, add it to `requirements.in` and then run:
 
 ```bash
-# Ativa o ambiente virtual
+# Activate virtual environment
 > .venv\Scripts\activate
-# Gera o requirements.txt
+# Generate requirements.txt
 (.venv) > python -m piptools compile --upgrade
-# Instala as dependências
+# Install dependencies
 (.venv) > python -m piptools sync
 ```
 
-Tudo junto, para facilitar:
+For simplicity, all together:
 
-```bash
-# Windows CMD e Powershell
-> .venv\Scripts\activate & python -m piptools compile --upgrade & python -m piptools sync
-> .venv\Scripts\activate ; python -m piptools compile --upgrade ; python -m piptools sync
+```powershell
+.venv\Scripts\activate ; python -m piptools compile --upgrade ; python -m piptools sync
 ```
+
+This will generate a new `requirements.txt` file with the new/updated dependency and install it in the virtual environment.
 
 ---
 
-## **Preparo para execução dos códigos**
+## **Preparing to Run Code**
 
-Sempre antes de rodar os códigos, é necessário ativar o ambiente virtual, para isso, basta rodar o comando abaixo:
+Always activate the virtual environment before running any code:
 
-```bash
-# Ativa o ambiente virtual
-> .venv\Scripts\activate
+```powershell
+.venv\Scripts\activate
 ```
 
-Depois é só rodar o código normalmente, com python.
+Then proceed to run the code normally with Python.
 
-```bash
-# Roda o código
+```powershell
 (.venv) > python main.py
 ```
 
@@ -76,29 +72,22 @@ Depois é só rodar o código normalmente, com python.
 
 ## **Pre-commit**
 
-Caso queira rodar o pre-commit para checar se o código está seguindo os padrões de código, basta rodar o comando abaixo:
+To check if changed files follows the code standards using pre-commit, run:
 
-```bash
-# Ativa o ambiente virtual
-> .venv\Scripts\activate
-# Roda o pre-commit
+```powershell
 (.venv) > pre-commit run --all-files
 ```
 
 ---
 
-## **Observações**
+## **Notes**
 
-Para desativar o ambiente virtual, rodar o comando `deactivate`.<br>
+To deactivate the virtual environment, use `deactivate`.
 
-```bash
-(.venv) >            # Ativo
-(.venv) > deactivate # Comando de desativar
->                    # Não ativo
+```powershell
+(.venv) >            # Active
+(.venv) > deactivate # Deactivation command
+>                    # Not active
 ```
 
-Outro ponto importante é verificar se o ambiente virtual está ativo antes de rodar os comandos de requerimento, caso não esteja, ele vai desinstalar/atualizar as dependências do seu ambiente global, o que pode causar problemas.
-
-## **Testes**
-
-Para rodar os testes, basta rodar o comando `pytest` no terminal.
+Another important point is to ensure the virtual environment is activated before running requirement commands. If not activated, it may uninstall/update dependencies in your global environment, which can cause issues.
