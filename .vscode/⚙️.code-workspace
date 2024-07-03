@@ -1,0 +1,49 @@
+{
+    "folders": [
+        {
+            "name": "ROOT",
+            "path": "../"
+        },
+        {
+            "name": "src",
+            "path": "../src"
+        },
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+        "[python]": {
+            "editor.formatOnSave": true,
+            "editor.defaultFormatter": "charliermarsh.ruff",
+            "editor.rulers": [
+                80,
+                120
+            ]
+        },
+        "ruff.format.args": [
+            "--line-length=120"
+        ],
+        "files.exclude": {},
+        "files.trimTrailingWhitespace": true,
+    },
+    "extensions": {
+        "recommendations": [
+            "2noscript.vscodesnapshot",
+            "adam-bender.commit-message-editor",
+            "charliermarsh.ruff",
+            "dzhavat.bracket-pair-toggler",
+            "eamodio.gitlens",
+            "github.vscode-pull-request-github",
+            "kamikillerto.vscode-colorize",
+            "ms-python.python",
+            "ms-toolsai.jupyter",
+            "ms-vscode-remote.remote-wsl",
+            "oderwat.indent-rainbow",
+            "pkief.material-icon-theme",
+            "pranshuagrawal.toggle-case",
+            "usernamehw.errorlens",
+            "visualstudioexptteam.vscodeintellicode",
+            "wakatime.vscode-wakatime",
+            "wraith13.unsaved-files-vscode"
+        ]
+    }
+}

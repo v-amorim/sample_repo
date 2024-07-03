@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+*$py.class
+*.manifest
+*.py[cod]
+*.spec
+.Python
+.ipynb_checkpoints
+__pycache__/
+__pypackages__/
+
+# Unit test / coverage reports
+*.cover
+*.py,cover
+.cache
+.coverage
+.coverage.*
+.hypothesis/
+.nox/
+.pytest_cache/
+.tox/
+cover/
+coverage.xml
+htmlcov/
+nosetests.xml
+
+# Environments
+.env
+.venv
+ENV/
+env.bak/
+env/
+venv.bak/
+venv/
