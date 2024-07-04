@@ -1,0 +1,40 @@
+[tool.ruff]
+    exclude = [".venv"]
+    extend-include = ["*.ipynb"]
+    line-length = 120
+    src = ["src"]
+    target-version = "py312"
+
+
+[tool.ruff.format]
+    docstring-code-format = true
+    skip-magic-trailing-comma = false
+
+
+[tool.ruff.lint.per-file-ignores]
+    "__init__.py" = ["E402"]
+    "**/{tests,docs,tools}/*" = ["E402"]
+
+
+[tool.ruff.lint]
+    select = ["ALL"]
+    ignore = [
+        #### Modules
+        "ANN",  # flake8-annotations
+        "COM",  # flake8-commas
+        "C90",  # mccabe
+        "EXE",  # flake8-executable
+        #### Rules
+        "D100", # undocumented-public-module        : Missing docstring in public module
+        "D101", # undocumented-public-class         : Missing docstring in public class
+        "D102", # undocumented-public-method        : Missing docstring in public method
+        "D103", # undocumented-public-function      : Missing docstring in public function
+        "D104", # undocumented-public-package	    : Missing docstring in public package
+        "D105", # undocumented-magic-method	        : Missing docstring in magic method
+        "D106", # undocumented-public-nested-class  : Missing docstring in public nested class
+        "D107", # undocumented-public-init          : Missing docstring in __init__
+        "E402",	# module-import-not-at-top-of-file  : Module level import not at top of cell
+        "F841", # unused-variable	                : Local variable {name} is assigned to but never used
+        "T201", # print statement	                : Checks for print statements
+    ]
+    unfixable = ["B"]

@@ -29,7 +29,7 @@ For simplicity, all together:
 python -m pip install virtualenv ; python -m virtualenv .venv ; .venv\Scripts\activate ; python -m pip install pip-tools ; python -m piptools compile --upgrade ; python -m piptools sync ; pre-commit install
 ```
 
----
+______________________________________________________________________
 
 ## **Requirements**
 
@@ -52,7 +52,7 @@ For simplicity, all together:
 
 This will generate a new `requirements.txt` file with the new/updated dependency and install it in the virtual environment.
 
----
+______________________________________________________________________
 
 ## **Preparing to Run Code**
 
@@ -68,7 +68,7 @@ Then proceed to run the code normally with Python.
 (.venv) > python main.py
 ```
 
----
+______________________________________________________________________
 
 ## **Pre-commit**
 
@@ -78,7 +78,7 @@ To check if changed files follows the code standards using pre-commit, run:
 (.venv) > pre-commit run --all-files
 ```
 
----
+______________________________________________________________________
 
 ## **Notes**
 
