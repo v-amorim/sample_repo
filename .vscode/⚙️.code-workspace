@@ -17,7 +17,13 @@
             "editor.rulers": [
                 80,
                 120
-            ]
+            ],
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": "explicit",
+                "source.fixAll": "explicit",
+                "notebook.source.organizeImports": "explicit",
+                "notebook.source.fixAll": "explicit"
+            }
         },
         "ruff.format.args": [
             "--line-length=120"

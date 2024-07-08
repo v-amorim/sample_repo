@@ -1,4 +1,5 @@
 # Setup dependencies
+ipykernel
 pip-tools
 pre-commit
 python-dotenv
