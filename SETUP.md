@@ -1,4 +1,4 @@
-## **Setup**
+## Setup
 
 It is recommended to install [Pyenv](https://github.com/pyenv-win/pyenv-win) to manage Python versions.
 
@@ -31,7 +31,7 @@ python -m pip install virtualenv ; python -m virtualenv .venv ; .venv\Scripts\ac
 
 ______________________________________________________________________
 
-## **Requirements**
+## Requirements
 
 Whenever installing a new dependency, add it to `requirements.in` and then run:
 
@@ -54,7 +54,7 @@ This will generate a new `requirements.txt` file with the new/updated dependency
 
 ______________________________________________________________________
 
-## **Preparing to Run Code**
+## Preparing to Run Code
 
 Always activate the virtual environment before running any code:
 
@@ -70,7 +70,7 @@ Then proceed to run the code normally with Python.
 
 ______________________________________________________________________
 
-## **Pre-commit**
+## Pre-commit
 
 To check if changed files follows the code standards using pre-commit, run:
 
@@ -80,7 +80,7 @@ To check if changed files follows the code standards using pre-commit, run:
 
 ______________________________________________________________________
 
-## **Notes**
+## Notes
 
 To deactivate the virtual environment, use `deactivate`.
 

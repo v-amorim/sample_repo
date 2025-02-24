@@ -28,7 +28,7 @@
         "ruff.format.args": [
             "--line-length=120"
         ],
-        "files.exclude": {},
+        "files.exclude": { },
         "files.trimTrailingWhitespace": true,
     },
     "extensions": {

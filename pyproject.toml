@@ -38,9 +38,12 @@
         "D203",     # one-blank-line-before-class	    : Checks for docstrings on class definitions that are not preceded by a blank line
         "D212",     # multi-line-summary-first-line     : Multi-line docstring summary should start at the first line
         "E402",	    # module-import-not-at-top-of-file  : Module level import not at top of cell
+        "F403",	    # module-import-not-at-top-of-file  : Module level import not at top of cell
         "ISC001",   # single-line-implicit-string-concatenation : Implicit string concatenation
+        "N802",     # invalid-function-name	            : function name should be lowercase
+        "N806",     # non-lowercase-variable-in-function    : function name should be lowercase
         "PYI024",   # collections-named-tuple           : Checks for uses of collections.namedtuple in stub files.
-        "S603",     # subprocess-without-shell-equals-true : Check for method calls that initiate a subprocess without a shell
+        "S603",     # subprocess-without-shell-equals-true  : Check for method calls that initiate a subprocess without a shell
         "T201",     # print statement	                : Checks for print statements
     ]
 
