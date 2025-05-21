@@ -25,9 +25,7 @@
                 "notebook.source.fixAll": "explicit"
             }
         },
-        "ruff.format.args": [
-            "--line-length=120"
-        ],
+        "ruff.lineLength": 120,
         "files.exclude": { },
         "files.trimTrailingWhitespace": true,
     },
